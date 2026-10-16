@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lulubi Gizlilik Politikası · Privacy Policy</title>
+  <meta name="description" content="Lulubi: Bebek Takibi uygulamasının hangi verileri nasıl işlediğini açıklayan gizlilik politikası. Privacy policy for the Lulubi: Baby Tracker app.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --bg: #fbf7f6;
+      --surface: #ffffff;
+      --ink: #231c33;
+      --ink-2: #463d58;
+      --muted: #7a7088;
+      --line: #eee4e6;
+      --brand: #2f3054;
+      --accent: #d9577a;
+      --accent-ink: #b83d60;
+      --accent-soft: #fce4ea;
+      --shadow: 0 1px 2px rgba(35, 28, 51, 0.06), 0 10px 30px rgba(35, 28, 51, 0.07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12111f;
+        --surface: #1c1a2e;
+        --ink: #f5eff4;
+        --ink-2: #ddd3dc;
+        --muted: #a99fb0;
+        --line: #2d2a44;
+        --accent: #ee86a3;
+        --accent-ink: #f4a9bf;
+        --accent-soft: #3a2533;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink-2);
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    a { color: var(--accent-ink); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(120% 140% at 85% 0%, #4a3f7a 0%, #2f3054 55%, #23243f 100%);
+      color: #fff;
+      padding: 40px 16px 96px;
+    }
+    /* Simgedeki gökyüzüne gönderme: birkaç yumuşak yıldız */
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #fdf0dc;
+      box-shadow: 0 0 12px 4px rgba(253, 240, 220, 0.5);
+    }
+    .hero::before { width: 4px; height: 4px; top: 36px; right: 22%; }
+    .hero::after { width: 3px; height: 3px; top: 120px; right: 8%; }
+    .hero-inner, main { max-width: 760px; margin: 0 auto; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { width: 56px; height: 56px; border-radius: 16px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); }
+    .brand span { font-size: 1.2rem; font-weight: 700; letter-spacing: 0.2px; }
+    .brand small { display: block; font-weight: 500; font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); }
+
+    .lang { display: inline-flex; background: rgba(255, 255, 255, 0.12); border-radius: 999px; padding: 4px; }
+    .lang button {
+      border: 0; background: transparent; color: rgba(255, 255, 255, 0.85);
+      font: inherit; font-size: 0.9rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { background: #fff; color: #2f3054; }
+    .lang button:focus-visible { outline: 2px solid #fdf0dc; outline-offset: 2px; }
+
+    h1 { margin: 32px 0 6px; font-size: clamp(1.75rem, 5vw, 2.4rem); line-height: 1.2; color: #fff; }
+    .updated { margin: 0; color: rgba(255, 255, 255, 0.78); font-size: 0.95rem; }
+
+    main { padding: 0 16px 48px; margin-top: -60px; position: relative; }
+
+    .summary { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+    .point {
+      background: var(--surface); border-radius: 18px; padding: 18px;
+      box-shadow: var(--shadow); border: 1px solid var(--line);
+    }
+    .point .icon {
+      width: 38px; height: 38px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: var(--accent-soft); color: var(--accent-ink);
+      margin-bottom: 10px;
+    }
+    .point .icon svg { width: 20px; height: 20px; }
+    .point strong { display: block; color: var(--ink); margin-bottom: 2px; }
+    .point p { margin: 0; font-size: 0.93rem; color: var(--muted); line-height: 1.5; }
+
+    .card {
+      background: var(--surface); border-radius: 22px; padding: 8px 28px 28px;
+      box-shadow: var(--shadow); border: 1px solid var(--line);
+    }
+    section + section { border-top: 1px solid var(--line); }
+    section { padding-top: 4px; }
+    h2 { color: var(--ink); font-size: 1.22rem; margin: 24px 0 8px; }
+    h3 { color: var(--ink); font-size: 1.04rem; margin: 20px 0 6px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-left: 1.2em; }
+    li { margin-bottom: 6px; }
+    li::marker { color: var(--accent); }
+    strong { color: var(--ink); }
+
+    .contact {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+      background: var(--accent-soft); border-radius: 14px; padding: 16px 18px; margin-top: 8px;
+    }
+    .contact .who { color: var(--ink); font-weight: 600; }
+    .button {
+      display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+      padding: 10px 16px; border-radius: 12px; font-weight: 600; font-size: 0.95rem;
+    }
+    @media (prefers-color-scheme: dark) { .button { color: #1a0f14; } }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 24px; }
+
+    /* Dil seçimi: yalnızca seçili dilin içeriği görünür; JS yoksa Türkçe.
+       !important: ".brand small" gibi daha özgül kurallar gizlemeyi ezmesin */
+    html:not([lang="tr"]) [data-lang="tr"], html:not([lang="en"]) [data-lang="en"] { display: none !important; }
+
+    @media (min-width: 640px) { .summary { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) {
+      .card { padding: 4px 18px 20px; border-radius: 18px; }
+      .hero { padding-top: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="top">
+        <div class="brand">
+          <img src="icon.png" alt="" width="56" height="56">
+          <span>Lulubi<small data-lang="tr">Bebek Takibi</small><small data-lang="en">Baby Tracker</small></span>
+        </div>
+        <div class="lang" role="group" aria-label="Dil / Language">
+          <button type="button" data-set-lang="tr" aria-pressed="true">Türkçe</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+        </div>
+      </div>
+      <h1><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span></h1>
+      <p class="updated"><span data-lang="tr">Son güncelleme: 16 Ekim 2026</span><span data-lang="en">Last updated: October 16, 2026</span></p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== TÜRKÇE ===================== -->
+    <div data-lang="tr">
+      <div class="summary" aria-label="Kısaca">
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg>
+          </div>
+          <strong>Hesap yok</strong>
+          <p>Adını, e-postanı veya telefon numaranı istemeyiz.</p>
+        </div>
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+          </div>
+          <strong>Bebeğinin bilgileri telefonunda</strong>
+          <p>Beslenme, uyku, bez ve ilaç kayıtları yalnızca cihazında saklanır, bize gönderilmez.</p>
+        </div>
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M7 21h10"/><path d="M12 17v4"/></svg>
+          </div>
+          <strong>Reklam ve satın alma</strong>
+          <p>Bunlar için Google AdMob ve RevenueCat sınırlı cihaz verisi işler; bebeğinin bilgilerini görmez.</p>
+        </div>
+      </div>
+
+      <article class="card">
+        <section>
+          <p style="margin-top:24px">Bu politika, <strong>elfdev</strong> ("biz") tarafından geliştirilen Lulubi: Bebek Takibi mobil uygulamasının ("Uygulama") hangi verileri nasıl işlediğini açıklar.</p>
+        </section>
+
+        <section>
+          <h2>Cihazında saklanan veriler</h2>
+          <p>Uygulamaya girdiğin bilgiler telefonundaki yerel bir veritabanında tutulur:</p>
+          <ul>
+            <li>Bebeğinin adı ve (girersen) doğum tarihi</li>
+            <li>Emzirme, biberon, uyku ve bez kayıtları</li>
+            <li>Eklediğin ilaç ve vitaminlerin adı, dozu, hatırlatma saatleri ve verilen dozlar</li>
+            <li>Tema, dil gibi uygulama ayarları</li>
+          </ul>
+          <p>Bu veriler bize veya başka bir sunucuya gönderilmez; bunlara biz erişemeyiz. Reklam ve satın alma hizmetleri de bu bilgileri görmez.</p>
+          <ul>
+            <li><strong>Yedekleme:</strong> "Yedeği klasöre kaydet" veya "Yedeği paylaş" seçeneklerini kullandığında bu veriler bir dosyaya yazılır. Dosyanın nereye kaydedileceğine ve kiminle paylaşılacağına sen karar verirsin.</li>
+            <li><strong>Android yedeklemesi:</strong> Telefonunda Google yedeklemesi açıksa Android, uygulama verilerini Google hesabına yedekleyebilir. Bu, Google'ın kendi hizmetidir ve telefonunun ayarlarından yönetilir.</li>
+            <li><strong>Bildirimler:</strong> İlaç hatırlatıcıları telefonunda yerel olarak planlanır; bunun için herhangi bir sunucuya veri gönderilmez.</li>
+            <li><strong>Silme:</strong> Bir kaydı veya bebeği uygulama içinden silebilirsin. Tüm verilerini uygulamayı kaldırarak veya telefonunun ayarlarından uygulama verilerini temizleyerek silebilirsin.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Üçüncü taraf hizmetler</h2>
+
+          <h3>Reklamlar: Google AdMob</h3>
+          <p>Uygulamanın ücretsiz sürümü, Google LLC'nin AdMob hizmetiyle reklam gösterebilir. AdMob reklam sunmak, ölçmek ve dolandırıcılığı önlemek için cihazından şu verileri toplayabilir: reklam kimliği (Android Advertising ID), IP adresi (ve buna bağlı yaklaşık konum), cihaz ve uygulama bilgileri, reklamlarla etkileşimler ve teşhis bilgileri.</p>
+          <ul>
+            <li>Reklam kimliğini telefonunun <strong>Ayarlar → Google → Reklamlar</strong> bölümünden sıfırlayabilir veya silebilirsin.</li>
+            <li>Bazı bölgelerde uygulama ilk açılışta reklam tercihlerin için onay ister.</li>
+            <li>Ayrıntılar için: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites">Google'ın iş ortaklarının uygulamalarından gelen verileri nasıl kullandığı</a>.</li>
+          </ul>
+
+          <h3>Uygulama içi satın alma: Google Play ve RevenueCat</h3>
+          <p>Lulubi Pro satın alımları Google Play üzerinden yapılır. Ödeme bilgilerin Google tarafından işlenir; biz kart bilgilerini görmeyiz. Satın alımının doğrulanması ve başka bir cihazda geri yüklenebilmesi için RevenueCat, Inc. satın alma geçmişini ve rastgele oluşturulan anonim bir kullanıcı kimliğini işler. Ayrıntılar için: <a href="https://www.revenuecat.com/privacy">RevenueCat Gizlilik Politikası</a>.</p>
+        </section>
+
+        <section>
+          <h2>Çocuklar</h2>
+          <p>Lulubi, ebeveynler ve bebek bakımını üstlenen yetişkinler için tasarlanmıştır; çocuklara yönelik değildir. Bebeğe ait bilgiler ebeveyn tarafından girilir ve yalnızca cihazda saklanır. Çocuklardan bilerek veri toplamayız.</p>
+        </section>
+
+        <section>
+          <h2>Tıbbi uyarı</h2>
+          <p>Lulubi tıbbi bir cihaz değildir ve tıbbi tavsiye vermez. İlaç hatırlatıcıları yalnızca senin girdiğin saatleri hatırlatır; doz ve kullanım için doktoruna danış.</p>
+        </section>
+
+        <section>
+          <h2>Veri güvenliği</h2>
+          <p>Hizmet sağlayıcılara iletilen veriler şifreli bağlantı (HTTPS/TLS) üzerinden gönderilir. Cihazında saklanan veriler telefonunun kendi güvenlik önlemleriyle korunur.</p>
+        </section>
+
+        <section>
+          <h2>Hakların</h2>
+          <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ve geçerli diğer mevzuat kapsamındaki hakların için (bilgi talep etme, düzeltme, silme gibi) bize aşağıdaki adresten ulaşabilirsin. Satın alma kayıtlarının RevenueCat'ten silinmesini de bu adres üzerinden isteyebilirsin.</p>
+        </section>
+
+        <section>
+          <h2>Değişiklikler</h2>
+          <p>Bu politikayı güncellediğimizde yeni sürümü bu sayfada yayımlar ve üstteki tarihi değiştiririz.</p>
+        </section>
+
+        <section>
+          <h2>İletişim</h2>
+          <div class="contact">
+            <div>
+              <div class="who">elfdev</div>
+              <a href="mailto:elfdev.tr@gmail.com">elfdev.tr@gmail.com</a>
+            </div>
+            <a class="button" href="mailto:elfdev.tr@gmail.com?subject=Lulubi%20gizlilik">E-posta gönder</a>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div data-lang="en">
+      <div class="summary" aria-label="In short">
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg>
+          </div>
+          <strong>No account</strong>
+          <p>We don't ask for your name, email or phone number.</p>
+        </div>
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+          </div>
+          <strong>Your baby's data stays on your phone</strong>
+          <p>Feeding, sleep, diaper and medicine entries are stored only on your device and never sent to us.</p>
+        </div>
+        <div class="point">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M7 21h10"/><path d="M12 17v4"/></svg>
+          </div>
+          <strong>Ads and purchases</strong>
+          <p>Google AdMob and RevenueCat process limited device data for these; they never see your baby's information.</p>
+        </div>
+      </div>
+
+      <article class="card">
+        <section>
+          <p style="margin-top:24px">This policy explains what data the Lulubi: Baby Tracker mobile app (the "App"), developed by <strong>elfdev</strong> ("we"), processes and how.</p>
+        </section>
+
+        <section>
+          <h2>Data stored on your device</h2>
+          <p>The information you enter is kept in a local database on your phone:</p>
+          <ul>
+            <li>Your baby's name and (if you enter it) date of birth</li>
+            <li>Breastfeeding, bottle, sleep and diaper entries</li>
+            <li>The names, doses and reminder times of medicines and vitamins you add, and the doses given</li>
+            <li>App settings such as theme and language</li>
+          </ul>
+          <p>This data is not sent to us or to any other server, and we cannot access it. The advertising and purchase services do not see it either.</p>
+          <ul>
+            <li><strong>Backups:</strong> When you use "Save backup to folder" or "Share backup", this data is written to a file. You decide where the file is saved and who it is shared with.</li>
+            <li><strong>Android backup:</strong> If Google backup is turned on on your phone, Android may back up app data to your Google account. This is Google's own service and is managed in your phone's settings.</li>
+            <li><strong>Notifications:</strong> Medicine reminders are scheduled locally on your phone; no data is sent to any server for this.</li>
+            <li><strong>Deletion:</strong> You can delete an entry or a baby inside the app. You can delete all of your data by uninstalling the app or clearing its data in your phone's settings.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Third-party services</h2>
+
+          <h3>Ads: Google AdMob</h3>
+          <p>The free version of the App may show ads through Google LLC's AdMob service. To serve and measure ads and to prevent fraud, AdMob may collect the following from your device: the advertising ID (Android Advertising ID), IP address (and the approximate location derived from it), device and app information, ad interactions and diagnostics.</p>
+          <ul>
+            <li>You can reset or delete your advertising ID in your phone's <strong>Settings → Google → Ads</strong>.</li>
+            <li>In some regions, the App asks for your ad preferences consent on first launch.</li>
+            <li>For details: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites or apps that use its services</a>.</li>
+          </ul>
+
+          <h3>In-app purchases: Google Play and RevenueCat</h3>
+          <p>Lulubi Pro purchases are made through Google Play. Your payment details are processed by Google; we never see your card information. To verify your purchase and let you restore it on another device, RevenueCat, Inc. processes your purchase history and a randomly generated anonymous user ID. For details: <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>.</p>
+        </section>
+
+        <section>
+          <h2>Children</h2>
+          <p>Lulubi is designed for parents and adults caring for a baby; it is not directed at children. Information about the baby is entered by the parent and stored only on the device. We do not knowingly collect data from children.</p>
+        </section>
+
+        <section>
+          <h2>Medical disclaimer</h2>
+          <p>Lulubi is not a medical device and does not give medical advice. Medicine reminders only remind you at the times you enter; ask your doctor about dosage and use.</p>
+        </section>
+
+        <section>
+          <h2>Data security</h2>
+          <p>Data sent to service providers is transmitted over an encrypted connection (HTTPS/TLS). Data stored on your device is protected by your phone's own security measures.</p>
+        </section>
+
+        <section>
+          <h2>Your rights</h2>
+          <p>To exercise your rights under the EU General Data Protection Regulation (GDPR), Turkey's Personal Data Protection Law (KVKK) and other applicable laws (such as requesting access, correction or deletion), contact us at the address below. You can also use this address to request deletion of your purchase records from RevenueCat.</p>
+        </section>
+
+        <section>
+          <h2>Changes</h2>
+          <p>When we update this policy, we will publish the new version on this page and change the date at the top.</p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <div class="contact">
+            <div>
+              <div class="who">elfdev</div>
+              <a href="mailto:elfdev.tr@gmail.com">elfdev.tr@gmail.com</a>
+            </div>
+            <a class="button" href="mailto:elfdev.tr@gmail.com?subject=Lulubi%20privacy">Send an email</a>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer>© 2026 elfdev · Lulubi</footer>
+  </main>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll('[data-set-lang]');
+
+      function apply(lang) {
+        root.lang = lang;
+        document.title = lang === 'en' ? 'Lulubi Privacy Policy' : 'Lulubi Gizlilik Politikası';
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)); });
+      }
+
+      // Öncelik: ?lang= bağlantısı, sonra kullanıcının önceki seçimi, sonra tarayıcı dili
+      var fromUrl = new URLSearchParams(location.search).get('lang');
+      var saved = null;
+      try { saved = localStorage.getItem('lulubi-privacy-lang'); } catch (e) {}
+      var browser = (navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
+      var initial = [fromUrl, saved, browser].filter(function (l) { return l === 'tr' || l === 'en'; })[0];
+      apply(initial);
+
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+          apply(b.dataset.setLang);
+          try { localStorage.setItem('lulubi-privacy-lang', b.dataset.setLang); } catch (e) {}
+          var url = new URL(location.href);
+          url.searchParams.set('lang', b.dataset.setLang);
+          history.replaceState(null, '', url);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
